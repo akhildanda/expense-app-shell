@@ -46,7 +46,7 @@ VALIDATE $? "Starting mysql Server"
   mysql -h db.akhildev.online -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
      if [ $? -ne 0 ]
      then 
-       mysql_secure_installation --set-root-pass {mysql_root_password} &>>$LOGFILE
+       mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOGFILE
       VALIDATE $? "Setting up root password"
     else
        echo -e "mysql root password is already setup...$Y SKIPPING $N"
