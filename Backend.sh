@@ -80,10 +80,4 @@ VALIDATE(){
     VALIDATE $? "Scheme loading"
 
     systemctl restart backend &>>$LOGFILE
-    VALIDATE $? "Restarting backend"
-
-
-   
-   
-
-    
+    VALIDATE $? "Restarting backend"  
