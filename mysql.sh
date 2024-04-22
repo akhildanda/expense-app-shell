@@ -40,7 +40,7 @@ VALIDATE $? "Starting mysql Server"
  # VALIDATE $? "Setting up root password"
 
 # below code is used for idempotent nature
-  mysql -h db.akhildev.online -u root -pExpenseapp@1 -e 'show databases;' &>>$LOGFILE
+  mysql -h db.akhildev.online -uroot -pExpenseapp@1 -e 'show databases;' &>>$LOGFILE
      if [ $? -ne 0 ]
      then 
        mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
