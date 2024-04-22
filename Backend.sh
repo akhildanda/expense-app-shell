@@ -76,7 +76,7 @@ VALIDATE(){
     dnf install mysql -y &>>$LOGFILE
     VALIDATE $? "Installing MYSQL client"
 
-    mysql -h db.akhildev.online -uroot -p${ysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
+    mysql -h db.akhildev.online -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
     VALIDATE $? "Scheme loading"
 
     systemctl restart backend &>>$LOGFILE
