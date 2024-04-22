@@ -19,7 +19,7 @@ VALIDATE(){
     fi
 }
 
-    if [ $USERID -ne 0]
+    if [ $USERID -ne 0 ]
     then
       echo "PLEASE RUN THE SCRIPT WITH ROOT ACCESS."
       exit 1
